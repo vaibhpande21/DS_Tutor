@@ -6,3 +6,5 @@ ftfy
 openai
 PyMuPDF
 streamlit
+flask
+requests
