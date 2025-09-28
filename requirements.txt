@@ -8,3 +8,4 @@ PyMuPDF
 streamlit
 flask
 requests
+python-dotenv
