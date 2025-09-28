@@ -1,0 +1,22 @@
+# virtual environment
+ds_venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# macOS junk
+.DS_Store
+
+# secrets
+.env
+
+# git
+.git
+.gitignore
+
+# logs
+*.log
