@@ -42,11 +42,83 @@ Built with **Streamlit (frontend)**, **Flask API (backend)**, and deployed on **
 
 ---
 
+## 📂 Project Structure  
+```plaintext
+ds-tutor-app/
+├── backend/                # Flask API
+│   ├── app.py
+│   ├── routes/
+│   └── ...
+├── frontend/               # Streamlit UI
+│   └── app.py
+├── Dockerfile
+├── requirements.txt
+├── .github/workflows/      # CI/CD pipelines
+│   └── deploy.yml
+└── README.md
+```
+---
+
 ## ⚙️ Setup (Local Development)
 
-1. Clone the repository:
+1️⃣ Clone the repository
    ```bash
-   git clone https://github.com/your-username/ds-tutor-app.git
-   cd ds-tutor-app
+   git clone https://github.com/vaibhpande21/ds-tutor-app.git
+   cd Data_Science_quiz_bot
+   ```
+2️⃣ Create a virtual environment
+```bash
+python -m venv .venv  
+source .venv/bin/activate   # Mac/Linux  
+.venv\Scripts\activate      # Windows
+```
 
+3️⃣ Install dependencies
+```bash
+pip install -r requirements.txt
+```
 
+4️⃣ Set up environment variables
+```bash
+Create a .env file in the project root:
+OPENAI_API_KEY=openai_api_key
+```
+
+▶️ Running the App
+Start the Streamlit app:
+```bash
+streamlit run frontend/app.py
+```
+The app will open in your browser at:
+```bash
+👉 http://localhost:8501
+```
+
+## ▶️ Run the backend (Flask API)
+```bash
+python backend/app.py
+```
+
+🐳 Run with Docker (Locally)
+```bash
+docker build -t ds_tutor_app .
+docker run -p 8501:8501 -p 5001:5001 ds_tutor_app
+```
+
+☁️ Deployment on AWS ECS (Fargate)
+- ** The project is deployed on AWS ECS Fargate with CI/CD:
+- ** GitHub Actions builds & pushes Docker image → Amazon ECR
+- ** ECS Task Definition pulls the new image
+- ** ECS Service updates the running container with the latest version
+
+🎯 Future Improvements
+- ** Add user authentication & scores history
+- ** Add more subjects & difficulty levels
+- ** Deploy with HTTPS + Load Balancer
+- ** Multi-user support (team quizzes, leaderboards)
+
+✨ Author
+
+👨‍💻 Developed by Vaibhav Pandey
+📫 Reach me at: LinkedIn | GitHub
+ 
