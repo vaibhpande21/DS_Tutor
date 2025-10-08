@@ -120,5 +120,6 @@ docker run -p 8501:8501 -p 5001:5001 ds_tutor_app
 ✨ Author
 
 👨‍💻 Developed by Vaibhav Pandey
-📫 Reach me at: LinkedIn | GitHub
+📫 Reach me at: 
+[LinkedIn](https://www.linkedin.com/in/vaibhav-pandey-re2103/) • [GitHub](https://github.com/vaibhpande21)
  
