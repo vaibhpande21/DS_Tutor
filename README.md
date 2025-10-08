@@ -10,13 +10,11 @@ Built with **Streamlit (frontend)**, **Flask API (backend)**, and deployed on **
 
 ---
 
-## 📸 Screenshots  
+##  📌 System Architecture
 
-### 🎯 Quiz Interface  
-<img src="assets/quiz_ui.png" alt="Quiz UI" width="600"/>
+The following diagram explains the **Quiz Bot - Internal Flow**:
 
-### 📊 Example Question Feedback  
-<img src="assets/quiz_feedback.png" alt="Answer Feedback" width="600"/>
+![Quiz Bot Workflow](quiz_bot.png)
 
 ---
 
@@ -106,20 +104,13 @@ docker run -p 8501:8501 -p 5001:5001 ds_tutor_app
 ```
 
 ☁️ Deployment on AWS ECS (Fargate)
-- ** The project is deployed on AWS ECS Fargate with CI/CD:
-- ** GitHub Actions builds & pushes Docker image → Amazon ECR
-- ** ECS Task Definition pulls the new image
-- ** ECS Service updates the running container with the latest version
+-  The project is deployed on AWS ECS Fargate with CI/CD:
+-  GitHub Actions builds & pushes Docker image → Amazon ECR
+-  ECS Task Definition pulls the new image
+-  ECS Service updates the running container with the latest version
 
 🎯 Future Improvements
-- ** Add user authentication & scores history
-- ** Add more subjects & difficulty levels
-- ** Deploy with HTTPS + Load Balancer
-- ** Multi-user support (team quizzes, leaderboards)
-
-✨ Author
-
-👨‍💻 Developed by Vaibhav Pandey
-📫 Reach me at: 
-[LinkedIn](https://www.linkedin.com/in/vaibhav-pandey-re2103/) • [GitHub](https://github.com/vaibhpande21)
- 
+-  Add user authentication & scores history
+-  Add more subjects & difficulty levels
+-  Deploy with HTTPS + Load Balancer
+-  Multi-user support (team quizzes, leaderboards)
